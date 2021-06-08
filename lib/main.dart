@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 
-// Main Function Start
 void main() {
   runApp(MyApp());
 }
-// Main Function Ends
 
-// First Stateless Widget with MaterialApp Start
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,18 +13,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-// First Stateless Widget with MaterialApp Ends
 
-
-// Main Stateful Widget Start
 class ListViewPage extends StatefulWidget {
   @override
   _ListViewPageState createState() => _ListViewPageState();
 }
 
 class _ListViewPageState extends State<ListViewPage> {
-  // Title List Here
-  var titleList = [
+  var indice = [
     "Success",
     "Motivation",
     "Hard Work",
@@ -37,8 +30,7 @@ class _ListViewPageState extends State<ListViewPage> {
     "Team Work"
   ];
 
-  // Description List Here
-  var descList = [
+  var informacoes = [
     "Push yourself, because no one else is going to do it for you.",
     "Your limitation—it's only your imagination.",
     "Hard Work changes the life.",
@@ -48,8 +40,7 @@ class _ListViewPageState extends State<ListViewPage> {
     "Talent wins games, but teamwork and intelligence win championships."
   ];
 
-  // Image Name List Here
-  var imgList = [
+  var imagens = [
     "assets/images/img1.jpg",
     "assets/images/img2.jpg",
     "assets/images/img3.jpg",
@@ -61,11 +52,9 @@ class _ListViewPageState extends State<ListViewPage> {
 
   @override
   Widget build(BuildContext context) {
-    // MediaQuery to get Device Width
     double width = MediaQuery.of(context).size.width * 0.6;
     return Scaffold(
       appBar: AppBar(
-        // App Bar
         title: Text(
           "ListView On-Click Event",
           style: TextStyle(color: Colors.grey),
@@ -73,23 +62,21 @@ class _ListViewPageState extends State<ListViewPage> {
         elevation: 0,
         backgroundColor: Colors.white,
       ),
-      // Main List View With Builder
       body: ListView.builder(
-        itemCount: imgList.length,
+        itemCount: imagens.length,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              // This Will Call When User Click On ListView Item
-              showDialogFunc(context, imgList[index], titleList[index], descList[index]);
+              showDialogFunc(
+                  context, imagens[index], indice[index], informacoes[index]);
             },
-            // Card Which Holds Layout Of ListView Item
             child: Card(
               child: Row(
                 children: <Widget>[
                   Container(
                     width: 100,
                     height: 100,
-                    child: Image.asset(imgList[index]),
+                    child: Image.asset(imagens[index]),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -97,7 +84,7 @@ class _ListViewPageState extends State<ListViewPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          titleList[index],
+                          indice[index],
                           style: TextStyle(
                             fontSize: 25,
                             color: Colors.grey,
@@ -106,15 +93,6 @@ class _ListViewPageState extends State<ListViewPage> {
                         ),
                         SizedBox(
                           height: 10,
-                        ),
-                        Container(
-                          width: width,
-                          child: Text(
-                            descList[index],
-                            maxLines: 3,
-                            style: TextStyle(
-                                fontSize: 15, color: Colors.grey[500]),
-                          ),
                         ),
                       ],
                     ),
@@ -129,8 +107,7 @@ class _ListViewPageState extends State<ListViewPage> {
   }
 }
 
-// This is a block of Model Dialog 
-showDialogFunc(context, img, title, desc) {
+showDialogFunc(context, img, ind, info) {
   return showDialog(
     context: context,
     builder: (context) {
@@ -148,19 +125,11 @@ showDialogFunc(context, img, title, desc) {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(5),
-                  child: Image.asset(
-                    img,
-                    width: 200,
-                    height: 200,
-                  ),
-                ),
                 SizedBox(
                   height: 10,
                 ),
                 Text(
-                  title,
+                  ind,
                   style: TextStyle(
                     fontSize: 25,
                     color: Colors.grey,
@@ -175,7 +144,7 @@ showDialogFunc(context, img, title, desc) {
                   child: Align(
                     alignment: Alignment.center,
                     child: Text(
-                      desc,
+                      info,
                       maxLines: 3,
                       style: TextStyle(fontSize: 15, color: Colors.grey[500]),
                       textAlign: TextAlign.center,
