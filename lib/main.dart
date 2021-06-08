@@ -143,7 +143,7 @@ showDialogFunc(context, img, ind, info) {
             ),
             padding: EdgeInsets.all(15),
             height: 500,
-            width: MediaQuery.of(context).size.width * 1.0,
+            width: MediaQuery.of(context).size.width * 0.9,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
@@ -160,6 +160,7 @@ showDialogFunc(context, img, ind, info) {
                 ),
                 Text(
                   ind,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 25,
                     color: Colors.grey,
@@ -175,7 +176,6 @@ showDialogFunc(context, img, ind, info) {
                     alignment: Alignment.center,
                     child: Text(
                       info,
-                      maxLines: 3,
                       style: TextStyle(fontSize: 15, color: Colors.grey[500]),
                       textAlign: TextAlign.center,
                     ),
