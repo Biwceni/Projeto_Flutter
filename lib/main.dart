@@ -100,11 +100,6 @@ class _ListViewPageState extends State<ListViewPage> {
             child: Card(
               child: Row(
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    child: Image.asset(imagens[index]),
-                  ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Column(
@@ -147,8 +142,8 @@ showDialogFunc(context, img, ind, info) {
               color: Colors.white,
             ),
             padding: EdgeInsets.all(15),
-            height: 320,
-            width: MediaQuery.of(context).size.width * 0.7,
+            height: 500,
+            width: MediaQuery.of(context).size.width * 1.0,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
