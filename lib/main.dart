@@ -98,6 +98,7 @@ class _ListViewPageState extends State<ListViewPage> {
                   context, imagens[index], indice[index], informacoes[index]);
             },
             child: Card(
+              color: Colors.lightBlue[600],
               child: Row(
                 children: <Widget>[
                   Padding(
@@ -108,8 +109,8 @@ class _ListViewPageState extends State<ListViewPage> {
                         Text(
                           indice[index],
                           style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.grey,
+                            fontSize: 18,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -139,10 +140,10 @@ showDialogFunc(context, img, ind, info) {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
+              color: Colors.lightBlue[400],
             ),
             padding: EdgeInsets.all(15),
-            height: 500,
+            height: 550,
             width: MediaQuery.of(context).size.width * 0.9,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -155,17 +156,20 @@ showDialogFunc(context, img, ind, info) {
                     height: 200,
                   ),
                 ),
+                SizedBox(
+                  height: 20,
+                ),
                 Text(
                   ind,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 25,
-                    color: Colors.grey,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Container(
                   child: Align(
@@ -173,7 +177,7 @@ showDialogFunc(context, img, ind, info) {
                     child: Text(
                       info,
                       textAlign: TextAlign.justify,
-                      style: TextStyle(fontSize: 15, color: Colors.grey[500]),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
                   ),
                 ),
