@@ -83,7 +83,7 @@ class _ListViewPageState extends State<ListViewPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "ListView On-Click Event",
+          "Info Flutter",
           style: TextStyle(color: Colors.grey),
         ),
         elevation: 0,
@@ -108,7 +108,7 @@ class _ListViewPageState extends State<ListViewPage> {
                         Text(
                           indice[index],
                           style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 20,
                             color: Colors.grey,
                             fontWeight: FontWeight.bold,
                           ),
@@ -151,12 +151,9 @@ showDialogFunc(context, img, ind, info) {
                   borderRadius: BorderRadius.circular(5),
                   child: Image.asset(
                     img,
-                    width: 200,
+                    width: 300,
                     height: 200,
                   ),
-                ),
-                SizedBox(
-                  height: 10,
                 ),
                 Text(
                   ind,
@@ -171,13 +168,12 @@ showDialogFunc(context, img, ind, info) {
                   height: 10,
                 ),
                 Container(
-                  // width: 200,
                   child: Align(
                     alignment: Alignment.center,
                     child: Text(
                       info,
+                      textAlign: TextAlign.justify,
                       style: TextStyle(fontSize: 15, color: Colors.grey[500]),
-                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
