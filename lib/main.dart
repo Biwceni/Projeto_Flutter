@@ -84,10 +84,10 @@ class _ListViewPageState extends State<ListViewPage> {
       appBar: AppBar(
         title: Text(
           "Info Flutter",
-          style: TextStyle(color: Colors.grey),
+          style: TextStyle(color: Colors.blue),
         ),
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.lightBlue[50],
       ),
       body: ListView.builder(
         itemCount: imagens.length,
