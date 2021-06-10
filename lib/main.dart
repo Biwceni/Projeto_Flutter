@@ -55,7 +55,7 @@ class _ListViewPageState extends State<ListViewPage> {
     "Da mesma forma que em Android e iOS existem componentes básicos para se escrever uma aplicação, no Flutter não seria diferente. Uma coisa bacana do Flutter é que existem dois tipos de componentes visuais, o Material que é baseado no Material Design e o Cuppertino que é baseado em componentes do iOS. Outra coisa quando se está utilizando os Widgets do Material, é que todas as coisas nativas de cada sistema é mantida, como efeitos de scroll, fonte e animação de navegação.",
     "Para se desenvolver aplicativos em Flutter, existem duas IDEs bem conhecidas que basta a instalação de um plugin e tudo estará pronto. Ambas IDEs possuem o suporte necessário para você começar seu app, inclusive com suporte para Debug e Hot Reloading, que faz com que tudo que você alterar, será imediatamente refletido no seu app.",
     "Quando se está desenvolvendo aplicações é muito comum ter a necessidade de quebrar suas regras de negócios em várias camadas, até mesmo para respeitar princípios como SOLID e ter a flexibilidade de testar suas regras. Atualmente a comunidade do Flutter tem se preocupado bastante sobre arquiteturas de desenvolvimento e com isso desenvolveram um site chamado fluttersamples.com.",
-    "Exemplo do que seria um hello world em Flutter."
+    "Exemplo do que seria um hello world em Flutter. Aprenda mais sobre Flutter e crie o seu primeiro projeto no site: https://www.devmedia.com.br/hello-world-com-flutter/40321."
   ];
 
   var imagens = [
